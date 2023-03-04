@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>Hello World!!!!</h1> -->
+    <pre>
+    JavaScript :- 
+        It is a Scripting and Programming language. 
+        Developed by Brendon Eich in 1995.
+        It is dynamically-typed language --> It means while creating variable, we don't need to specify what type of data we want to store.
+        It is reference based language.
+        We use JavaScript to add functinality.
+    
+    To run JavaScript, we need JRE --> 1. Browser 2. Node JS
+        1. Browser - It is made up of JavaScript. Every browser ha JS Engine.
+        2. Node Js - Node JS is an application made up of J8 Engine &  c++ Bundle (code) --> Node JS help in creating server.
+    
+    Due to rapid growth of JavaScript --> Need maintain & managed --> Netscape handed the job of creating a language specification --> ECMA (European Computer Manufacturer Association).
+    
+    JavaScript Runtime componet --> JS Engine, Web API, Event Loop, Callstack, Callback Queue , Microtask Queue
+    
+        1. JS Engine :- It is a software that convert JS code to machine understandable language. In JS Engine, we hjave JIT Compiler --> In JS Engine, interpreter and Compiler works simulataneously to optimise the code at same time {Work of JIT Compiler}.
+    
+        2. Web API :- It act as a medium fro communication between two application. It helps JS Engine to communicate with outside enviroment.
+    
+        3. Event Loop :- It is a Program. It task is to monitor Callback Queue &  Callstack.
+    
+        4. Callstack :- It is part of Js Runtime enviroment. It stores the reference of executing instruction. It uses stack data structure to store instruction.
+    
+        5. Callback Queue :- We have Asynchronus instruction waiting for their instruction.
+    
+        6. Microtask Queue :- We have Asynchronus instruction waiting for their instruction.
+    
+    
+    Tokens :-
+        It is the Smallest unit of Programming language.
+    
+        Type of tokens : -
+            1. Keyword   2. Identifier     3. literal
+    
+    1. Keyword :- It is reserved word that has special meaning in JS.
+    
+    2. Identifier :- Identifier are the user-given name like variable name, class name, functiion name.
+    
+    3. literal :- literal are the value which are used in Program for processing. The different type of literal are in JavaScript are categorized based on their type.
+    
+        Based on the types :- 1. Primitive type literal   2. Non-Primitive type literal 
+    
+    3.1. Primitive type literal
+        In this we can store only single type of literal in a memory block.
+        It is immutable i.e. Will not change.
+        
+        we have 8 Primitive type literal : - Those are - Number, Bigint, Boolean, Undefined, NaN, Null, Symbol, String.
+    
+    3.2. Non-Primitive type literal
+        In this we can store multiple type of literal in one memory block.
+        It is mutable i.e. We can change.
+    
+    
+    Number :-
+    Bigint :-
+    Boolean :-
+    Undefined :-
+    NaN :-
+    Null :-
+    Symbol :-
+    String :-
+    
+    
+    Type Coercion
+        The process of converting one type of literal into another type of literal implicitly (automatically) by JS Engine or explicitly (forcefully) by user is called type coercion.
+    
+        We have two type of Type coercion :- 1. Implicit Type Coercion  2. Explicit Type Coercion
+    
+    1. Implicit type-coercion :- The process of converting one type of literal into another type of literal automatically by JS Engine is called Implicit type-coercion.
+    
+    2. Explicit type-coercion : - The process of converting one type of literal into another type of literal forcefully by user is called Implicit type-coercion.
+    
+    
+    Operator
+        Operator are the pre-defined symbol performing some Operation on operands (variable, literal).
+    
+    
+    Flow Control Statement 
+        It change or alter the flow of execution of Program.
+    
+        1. Decision Making Statement    2. Looping Statement    3. Jump Statement
+    
+    Math Functiion
+        math.random, math.sqrt, math.cbrt, math.pow, math.PI, math.log, math.abs
+    
+    
+    
+    Function
+        Block of memory or set of statements performing some special taks.
+    
+        Function allow us to use code again & again {Code reusibilty}.
+    
+        Function code will run when Function is called.
+        Function is object.
+    
+    
+    Way to create Function or type of Function :-
+        1. Function declaration (also called a function definition, or function statement)
+        2. Expression Function / Function as a expression
+        3. Immediate Invoke Function
+        4. Arrow Function
+    
+    How to call a Function? :-
+        To call a Function we need function_reference and paranthesis.
+    
+            syntax : - function_reference (argument);
+    
+        It will generate function call and function code will execute.
+    
+    
+    1. Function declaration statement :-
+    
+        consists of the function keyword, followed by:
+            The name of the function (Variable_Name):- it store the reference of function object (or says store function_reference).
+    
+            A list of parameters to the function, enclosed in parentheses and separated by commas.
+    
+            The JavaScript statements that define the function, enclosed in curly brackets, { /* statement we want to use or execute */ }.
+    
+                syntax :- function Variable_Name(parameters){
+                    // statement
+                    return;
+                }
+    
+        Parameter:- Parameter are the variable declared in the function definition. Parameter have local scope i.e. we can use parameter inside function only. 
+        Parameter are used to accept the value that are passed at the time of function call.
+    
+        Argument:- Argument are the value that are passed in the function call statement. Argument can be anything i.e. it can be literal or expression which gives a result.
+    
+        Return Keyword:- It is a keyword used as control transfer statement. It will stop the execution of function and return the control to the caller along with the data.
+    
+    
+    Note:- The variable declared inside a function cannot be exist outside that function.
+    Note:- If the function is not returning anything, JS Engine implicitly reurn undefined.
+    Note:- Function hoisting only works with function declarations — not with function expressions. 
+    
+    
+    2. Expression Function / Function as a expression :-
+    
+        Here,  we pass the function as a value to a variable.
+    
+        With the help of this variable, we call that function.
+    
+        The function which is passed as a value to a variable is referred as First Class Function.
+    
+        Expression Function can't be hoisted i.e. we can not use that function before declaration.
+    
+        Expression Function is also called Anonymous Function because it does not have to have a name.
+        
+            syntax:-
+               let speak =  function (){
+    
+                }
+                speak()
+    
+    
+    3. Immediate Invoke Function :-
+        when a function is called as soon as it's object is created is known as Immediate Invoke Function.
+    
+        We have to write the function inside the paranthesis to group it.
+    
+            syntax :- 
+                (function (){
+                    // statement
+                    // return keyword is not used here.
+                })
+            This whole thing hold the reference of Imm. Invoke Function
+    
+    
+        The function is not visible(available) outside the scope.
+    
+        After grouping it, we have to use paranthesis to call this function.
+    
+            syntax :-
+                (function (){
+                    // statement
+                    // return keyword is not used here.
+                })();
+    
+        Immediate Invoke Function execute only once.
+    
+        This function doesnot return anything. Even JS Engine is also not returning anything.
+    
+    
+    4. Arrow Function :- 
+        The main function of arrow function is to reduce the function syntax.
+    
+        Arrow Function is introduced in ES6.
+    
+            syntax :-
+            (Parameter) => {
+                // statement
+            }
+    
+            => :- called Flat Operator
+    
+        If we have only single parameter, it is not necessary to use paranthesis for paramenter.
+            syntax :-
+            a => {
+                return "Hello";
+            }
+    
+        If function have single statement, then block(paranthesis) is optional
+            syntax :-
+            (a,b) => a+b;
+    
+        Arrow functions are always anonymous.
+    
+        It does not have its own this, arguments, super, or new.target. 
+        
+        Two factors influenced the introduction of arrow functions: shorter functions and non-binding of this.
+    
+        In Arrow Function, we have two types of return :-
+            1. Implicit return
+            2. Explicit return
+    
+        4.1. Implicit return
+            If there is only one statement and 
+            If block is not created then JS Engine will return that statement automatically.
+            
+    
+        4.2. Explicit return 
+            If block is created and function is not returning any value, JS Engine will return undefined.
+            To return a value Explicitly from block, we have to use return keyword.
+            
+            If block is created then we have to use return keyword to return value otherwise JS Engine will return undefined.
+    
+    Functional Programming :-
+        Functional Programming is a programming technique where we pass a function along with a value to another function.
+    
+        In this approach, we generate "Generic Function". Here function task is not predefined. It perform multiple task not only single task.
+    
+        The Function which accept another function as a parameter or return a function is known as "Higher Order Function".
+    
+        The Function which is passed to another function or the function which is returned by another function is known as "Callback Function".
+    
+            syntax :-
+                function variable_Name(task, parameter1, parameter2){
+                    return task(parameter1,parameter2);
+                }
+    
+                task is also a function called Callback Function.
+    
+    Nested Function :-
+        The Function which is declared inside another function is called Nested Function.
+    
+        Outer function is Parent function and Inner function is child function.
+    
+    
+        Inner function is local to the outer function, it means we cannot access inner function outside the outer function.
+        To use(access) inner function outside the outer function -> it(outer function) should return the reference of inner function. With the help of inner function reference, we csn generate a call.
+    
+        Lexical scope :- 
+            It is the ability of JS Engine to search for a variable on the outer scope when variable is not available in the local scope.
+    
+            When a function is nested, Lexical scope is available. So, we can access the member of Parent Function.
+    
+        Direction of Lexical Scope :-
+            It will be Parent to child.
+    
+        Closure :-
+            It is an object.
+            It have state of parent. 
+            Closure is achieved when there us one function inside another function.
+            With the help of Closure, child can access the variable which is present inside te parent function.
+    
+            Closure help us to achieve Lexical scope or "Scope Chain".
+    
+            Closure preserve(store) the states of parent function even after the execution of parent function is completed.
+    
+            child function will have the reference of Closure.
+    
+            Every time, parent function is called -> new Closure is created.
+    
+            Closure is a function inside another function (parent function) anf has the access to the variable that are declared and defined inside the parent scope.
+    
+            Closure has access to variable in three scope:-
+                When variable declared in their scope.
+                When variable declared in a parent function scope.
+                When variable declared in Global scope.
+    
+        Disadvantage of Closure :-
+            High memory consumption.
+    
+    
+    Array :-
+        Array is a collection of heterogeneous element, arranged in an sequence, represented by integer value called index.
+        
+        Index start with zero(0) . Ending index is (array.length-1).
+    
+        Array size is not fixed i.e. Dynamic in nature means we can store 'N' number of element.
+    
+        Array is multi-value i.e. Non-primitive data type. 
+    
+        It is also the part of data structure (technique to store data in efficient ways).
+    
+    Way to create Array :-
+        1. By using square bracket '[]' and literal.
+    
+            syntax :-
+                let arr = []; // Empty Array
+                let arr1 = [10,20,50,60,40];
+    
+        2. By using 'new' keyword and Array Constructor.
+    
+            syntax :-
+                let arr = new Array(); // Empty Array
+                    here, new -> keyword which create memory block
+                          Array -> Array Constructor
+    
+                let arr1 = new Array(10,20,30,"Mohan");
+                console.log(arr1); -> it will print the array.
+    
+    Question :- let arr = [10,20,30,40,50];
+    How to Find length of array? 
+    How to Access the array element?
+    
+    Property of Array :-
+        1. length Property :- It will print the size of array.
+            syntax :-
+                Array_Reference.length
+    
+        2. Access array element :- 
+            syntax :-
+                Array_Reference[index]
+    
+            Note :- If we try to access the index that it greater than the array length -> We get undefined because size of array is not fixed in JS (i.e. Dynamic in nature). JS Engine managed the size, it doesnot take extra space in memory.
+                Here we don't get Array out of bound exception as like in Java.
+    
+    In array we have loop :-
+        1. for of loop
+        2. for in loop
+        3. for each loop
+    
+    for of loop :-
+        It will access Array element.
+        It start from zero(0) and end(stop iteration) at Array_Reference.length-1 .
+    
+        syntax :-
+            for(variable_to_store_value of Array_Reference) {
+                // Statement
+            }
+    
+    for in  loop :-
+        It will access Array index.
+        It start from zero(0) and end(stop iteration) at Array_Reference.length-1 .
+    
+        syntax :-
+            for(variable_to_store_index in Array_Reference) {
+                // Statement
+            }
+    
+    foreach loop :-
+        It will not return anything.
+    
+        syntax :-
+            Array_Reference.foreach((value, index, array) => {
+                // Statement
+            })
+    
+    
+    Function — a set of instructions that perform a task.
+    Method — a set of instructions that are associated with an object.
+    
+    1. push()
+        It will insert element at last of the array
+        It return array length.
+        syntax :- 
+            Array_Reference.push(value)
+    
+    2. pop()
+        It will delete the array element from last index.
+        It will return deleted element.
+        syntax :-
+            Array_Reference.pop()
+    
+    3. unshift()
+        It will insert element at 0th index'
+        It will return array length.
+        syntax :-
+            Array_Reference.unshift(value)
+    
+    4. shift()
+        It will delete the array element from 0th index.
+        It will return deleted element.
+        syntax :-
+            Array_Reference.shift()
+    
+    5. splice()
+        It will modify the original array.
+        It will return array of deleted elements.
+        We can perform Addition(insertion), Deletion & Replace of element.
+        
+        syntax :-
+            Array_Reference.splice(a,b,c)
+            here, a -> starting index.
+                  b -> number of element we want to delete.
+                  c -> element we want to store.
+    
+            For Insertion :-
+                Array_Reference.splice(a,0,c)
+            For Deletion :-
+                Array_Reference.splice(a,b)
+            For Replace :-
+                Array_Reference.splice(a,1,c)
+    
+    6. slice()
+        It will not modify the original array.
+        It will return array of copied elements.
+    
+        syntax :-
+            Array_Reference.slice(a,b)
+            here, a -> starting index.
+                  b -> Ending index.
+    
+    
+    7. indexOf()
+        If value is available, it will return the index else it will return -1.
+    
+        syntax :-
+            Array_Reference.indexOf(value, starting_index)
+    
+    8. includes()
+        If value is available, it will return true else it will return false.
+    
+        syntax :-
+            includes(value, starting_index)
+    
+    9. reverse()
+        It will reverse the original array.
+    
+        syntax :-
+            Array_Reference.reverse()
+    
+    10 . sort()
+        It is high order function. 
+        If function return positive value - sort in ascending manner.
+        If function return negative value - sort in descending manner.
+    
+        syntax :-
+            Array_Reference.sort(callback)
+                callback function :  (a,b) => b-a
+            eg :- Array_Reference.sort((a,b) => b-a)
+    
+    11. flat()
+        It will reduce the dimension of array.
+        
+        syntax :- 
+            Array_Reference.flat(depth)
+            here, default value of depth is 1
+    
+        Array Flatening :- It is the process of reducing the dimensionality if array.
+    
+    12. isArray()
+        It will return true if value is array else return false.
+    
+        syntax :-
+            Array_Reference.isArray(value)
+    
+    13. from()
+        It will convert value into array.
+        It will return new array.
+    
+        syntax :- 
+            Array_Reference.from(value)    
+                here, value should be iterable like "name".
+    
+    // Ecmascript Method
+        Ecmascript Method are high order function.
+        1. map()    2. filter()     3. reduce()
+            Non of the above three Method modify the original array.
+    
+    
+    14. map()
+        It is high order function.
+        It is used to modify value and create new array of modify value.
+        It will not modify original array.
+        It will return new array,  new array will have value those are returned by callback function.
+    
+        syntax :-
+            Array_Reference.map((value, index, array) => {
+                //Statement
+                // return value*2;
+                return value/index/array; 
+            })
+    
+    foreach loop :-
+        It will not return anything.
+    
+        syntax :-
+            Array_Reference.foreach((value, index, array) => {
+                // Statement
+                return value;
+            })
+    
+    15. filter()
+        It is high order function.
+        It is used to create new array of value on some condition.
+        It will not modify original array.
+        It will return true or false, if filter return true then only value will inserted into new array.
+    
+        syntax :- 
+            Array_Reference.filter((value, index, array) => {
+                if(condition){
+                    //Statement
+                    return value/index/array;
+                }
+            })
+    
+    16. reduce()
+        It is used to conclude the result in a single value.
+        It return single value.
+        It will not modify original array.
+    
+        syntax :-
+            Array_Reference.reduce((Accumulator, value, index, array) => {
+                // Statement
+            })
+    
+            Accumulator :- those value in which we can store the result.
+    
+    
+    
+
+    </pre>
+    <script src="script.js"></script>
+</body> 
+</html>

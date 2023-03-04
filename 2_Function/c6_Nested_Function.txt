@@ -1,0 +1,40 @@
+    The Function which is declared inside another function is called Nested Function.
+Nested Function :-
+
+    Outer function is Parent function and Inner function is child function.
+
+
+    Inner function is local to the outer function, it means we cannot access inner function outside the outer function.
+    To use(access) inner function outside the outer function -> it(outer function) should return the reference of inner function. With the help of inner function reference, we csn generate a call.
+
+    Lexical scope :- 
+        It is the ability of JS Engine to search for a variable on the outer scope when variable is not available in the local scope.
+
+        When a function is nested, Lexical scope is available. So, we can access the member of Parent Function.
+
+    Direction of Lexical Scope :-
+        It will be Parent to child.
+
+    Closure :-
+        It is an object.
+        It have state of parent. 
+        Closure is achieved when there us one function inside another function.
+        With the help of Closure, child can access the variable which is present inside te parent function.
+
+        Closure help us to achieve Lexical scope or "Scope Chain".
+
+        Closure preserve(store) the states of parent function even after the execution of parent function is completed.
+
+        child function will have the reference of Closure.
+
+        Every time, parent function is called -> new Closure is created.
+
+        Closure is a function inside another function (parent function) anf has the access to the variable that are declared and defined inside the parent scope.
+
+        Closure has access to variable in three scope:-
+            When variable declared in their scope.
+            When variable declared in a parent function scope.
+            When variable declared in Global scope.
+
+    Disadvantage of Closure :-
+        High memory consumption.

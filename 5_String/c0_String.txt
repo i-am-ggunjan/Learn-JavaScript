@@ -1,0 +1,118 @@
+String
+    It is an object.
+    It is collection of character.
+    Here, each character  is arranged in a sequence represented by integer which is called its index.
+    It is immutable.
+
+Way to create String :-
+    1. By using quotes.
+        Syntax :- let str1 = ""; // It will create empty string.
+                  let str2 = "chombi";
+
+    2. By using new keyword and String.
+        Syntax :- let str1 = new String(); // It will create empty string.
+                  let str2 = new String("chombi");
+
+
+To access character, we need :-
+    i.   String_Reference
+    ii.  Square bracket
+    iii. index
+        Syntax :-
+            String_Reference[index]
+
+        Example :-
+            let str = "chombi";
+            console.log(str);
+            console.log(str[2]); // Access the character of string with the help of index.
+
+        Now, we try to change the value by using index.
+            str[2]=u;
+            It will not work.
+
+
+Types of String in JavaScript :-
+    We have to two types of String'.
+    1. Single-Line String.
+    2. Multi-Line String.
+
+Way to create Single-Line String :-
+    1. By using Single Quotes.
+    2. By using Double Quotes.
+
+Way to create Multi-Line String :-
+    By using Back-ticks.
+        To insert variable, we have : - dollar and curly-braces
+         Syntax :- ${variable_name}
+
+
+String Method :-
+
+let str = "AnKur";
+console.log(str);
+console.log("===========");
+
+// toLowerCase :- It will return the lower case string.
+console.log(str.toLowerCase());
+// toUpperCase :- It will return the upper case string.
+console.log(str.toUpperCase());
+
+
+// indexOf("character") :- It will return index if character is available. If character is not available then it will return -1.
+console.log(str.indexOf("r"));
+// incudes("character") :- It will check whether character is available or not.
+console.log(str.includes("A"));
+
+
+// startsWith("character") :- It will check the character at 0th index. If it is available then it will return true else it will return false.
+console.log(str.startsWith("A"));
+// endsWith("character") :- It will check the character at last index. If it is available then it will return true else it will return false.
+console.log(str.endsWith("r"));
+
+
+// slice(starting_index , ending_index-1) :- It will return string of copied character.
+console.log(str.slice(0,-1));
+// console.log(typeof str.slice(0,3)); // We can check the type 
+// substring(starting_index , ending_index-1) :- It will return string of copied character.
+console.log(str.substring(0,4));
+// subString not take negative value while slice take both negative and positive value.
+
+
+// charCodeAt(index) :- It will return unicode.
+console.log(str.charCodeAt(0));
+
+
+// split("pattern") :- It is used to split the string on some pattern. It will return array of splited string.
+// toString dont accept any pattern
+
+
+// reverse()
+
+// join("pattern") :- It is used to convert the array to string on some pattern. It wil return string that is concatinated on some pattern.
+
+let str1 = "My first learning";
+console.log(str1);
+
+console.log("=========================");
+console.log(str1.split(""));
+console.log(str1.split(" "));
+console.log("=========================");
+
+
+console.log(str1.split("").reverse().join(""));
+console.log("================");
+
+console.log(str1.split(" ").reverse().join(" "));
+console.log("================");
+
+//  convert first letter of each string to upper case.
+let str3 = "we are on war.";
+console.log(str3);
+console.log("================");
+let res = str3.split(" ").map(value => {
+    return value[0].toUpperCase() + value.slice(1);
+})
+console.log(res);
+console.log(res.join(" "));
+console.log(res.reverse().join(" "));
+// split slice join

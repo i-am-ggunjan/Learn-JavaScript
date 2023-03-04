@@ -1,0 +1,15 @@
+Functional Programming :-
+    Functional Programming is a programming technique where we pass a function along with a value to another function.
+
+    In this approach, we generate "Generic Function". Here function task is not predefined. It perform multiple task not only single task.
+
+    The Function which accept another function as a parameter or return a function is known as "Higher Order Function".
+
+    The Function which is passed to another function or the function which is returned by another function is known as "Callback Function".
+
+        syntax :-
+            function variable_Name(task, parameter1, parameter2){
+                return task(parameter1,parameter2);
+            }
+
+            task is also a function called Callback Function.

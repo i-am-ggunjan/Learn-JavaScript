@@ -1,0 +1,74 @@
+Array :-
+    Array is a collection of heterogeneous element, arranged in an sequence, represented by integer value called index.
+    
+    Index start with zero(0) . Ending index is (array.length-1).
+
+    Array size is not fixed i.e. Dynamic in nature means we can store 'N' number of element.
+
+    Array is multi-value i.e. Non-primitive data type. 
+
+    It is also the part of data structure (technique to store data in efficient ways).
+
+Way to create Array :-
+    1. By using square bracket '[]' and literal.
+
+        syntax :-
+            let arr = []; // Empty Array
+            let arr1 = [10,20,50,60,40];
+
+    2. By using 'new' keyword and Array Constructor.
+
+        syntax :-
+            let arr = new Array(); // Empty Array
+                here, new -> keyword which create memory block
+                      Array -> Array Constructor
+
+            let arr1 = new Array(10,20,30,"Mohan");
+            console.log(arr1); -> it will print the array.
+
+Question :- let arr = [10,20,30,40,50];
+How to Find length of array? 
+How to Access the array element?
+
+Property of Array :-
+    1. length Property :- It will print the size of array.
+        syntax :-
+            Array_Reference.length
+
+    2. Access array element :- 
+        syntax :-
+            Array_Reference[index]
+
+        Note :- If we try to access the index that it greater than the array length -> We get undefined because size of array is not fixed in JS (i.e. Dynamic in nature). JS Engine managed the size, it doesnot take extra space in memory.
+            Here we don't get Array out of bound exception as like in Java.
+
+In array we have loop :-
+    1. for of loop
+    2. for in loop
+    3. for each loop
+
+for of loop :-
+    It will access Array element.
+    It start from zero(0) and end(stop iteration) at Array_Reference.length-1 .
+
+    syntax :-
+        for(variable_to_store_value of Array_Reference) {
+            // Statement
+        }
+
+for in  loop :-
+    It will access Array index.
+    It start from zero(0) and end(stop iteration) at Array_Reference.length-1 .
+
+    syntax :-
+        for(variable_to_store_index in Array_Reference) {
+            // Statement
+        }
+
+foreach loop :-
+    It will not return anything.
+
+    syntax :-
+        Array_Reference.foreach((value, index, array) => {
+            // Statement
+        })

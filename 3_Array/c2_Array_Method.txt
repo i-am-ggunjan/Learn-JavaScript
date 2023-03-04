@@ -1,0 +1,160 @@
+Function — a set of instructions that perform a task.
+Method — a set of instructions that are associated with an object.
+
+1. push()
+    It will insert element at last of the array
+    It return array length.
+    syntax :- 
+        Array_Reference.push(value)
+
+2. pop()
+    It will delete the array element from last index.
+    It will return deleted element.
+    syntax :-
+        Array_Reference.pop()
+
+3. unshift()
+    It will insert element at 0th index'
+    It will return array length.
+    syntax :-
+        Array_Reference.unshift(value)
+
+4. shift()
+    It will delete the array element from 0th index.
+    It will return deleted element.
+    syntax :-
+        Array_Reference.shift()
+
+5. splice()
+    It will modify the original array.
+    It will return array of deleted elements.
+    We can perform Addition(insertion), Deletion & Replace of element.
+    
+    syntax :-
+        Array_Reference.splice(a,b,c)
+        here, a -> starting index.
+              b -> number of element we want to delete.
+              c -> element we want to store.
+
+        For Insertion :-
+            Array_Reference.splice(a,0,c)
+        For Deletion :-
+            Array_Reference.splice(a,b)
+        For Replace :-
+            Array_Reference.splice(a,1,c)
+
+6. slice()
+    It will not modify the original array.
+    It will return array of copied elements.
+
+    syntax :-
+        Array_Reference.slice(a,b)
+        here, a -> starting index.
+              b -> Ending index.
+
+
+7. indexOf()
+    If value is available, it will return the index else it will return -1.
+
+    syntax :-
+        Array_Reference.indexOf(value, starting_index)
+
+8. includes()
+    If value is available, it will return true else it will return false.
+
+    syntax :-
+        includes(value, starting_index)
+
+9. reverse()
+    It will reverse the original array.
+
+    syntax :-
+        Array_Reference.reverse()
+
+10 . sort()
+    It is high order function. 
+    If function return positive value - sort in ascending manner.
+    If function return negative value - sort in descending manner.
+
+    syntax :-
+        Array_Reference.sort(callback)
+            callback function :  (a,b) => b-a
+        eg :- Array_Reference.sort((a,b) => b-a)
+
+11. flat()
+    It will reduce the dimension of array.
+    
+    syntax :- 
+        Array_Reference.flat(depth)
+        here, default value of depth is 1
+
+    Array Flatening :- It is the process of reducing the dimensionality if array.
+
+12. isArray()
+    It will return true if value is array else return false.
+
+    syntax :-
+        Array_Reference.isArray(value)
+
+13. from()
+    It will convert value into array.
+    It will return new array.
+
+    syntax :- 
+        Array_Reference.from(value)    
+            here, value should be iterable like "name".
+
+// Ecmascript Method
+    Ecmascript Method are high order function.
+    1. map()    2. filter()     3. reduce()
+        Non of the above three Method modify the original array.
+
+
+14. map()
+    It is high order function.
+    It is used to modify value and create new array of modify value.
+    It will not modify original array.
+    It will return new array,  new array will have value those are returned by callback function.
+
+    syntax :-
+        Array_Reference.map((value, index, array) => {
+            //Statement
+            // return value*2;
+            return value/index/array; 
+        })
+
+foreach loop :-
+    It will not return anything.
+
+    syntax :-
+        Array_Reference.foreach((value, index, array) => {
+            // Statement
+            return value;
+        })
+
+15. filter()
+    It is high order function.
+    It is used to create new array of value on some condition.
+    It will not modify original array.
+    It will return true or false, if filter return true then only value will inserted into new array.
+
+    syntax :- 
+        Array_Reference.filter((value, index, array) => {
+            if(condition){
+                //Statement
+                return value/index/array; 
+            }
+        })
+
+16. reduce()
+    It is used to conclude the result in a single value.
+    It return single value.
+    It will not modify original array.
+
+    syntax :-
+        Array_Reference.reduce((Accumulator, value, index, array) => {
+            // Statement
+        })
+
+        Accumulator :- those value in which we can store the result.
+

@@ -1,0 +1,143 @@
+Function
+    Block of memory or set of statements performing some special taks.
+
+    Function allow us to use code again & again {Code reusibilty}.
+
+    Function code will run when Function is called.
+    Function is object.
+
+
+Way to create Function or type of Function :-
+    1. Function declaration (also called a function definition, or function statement)
+    2. Expression Function / Function as a expression
+    3. Immediate Invoke Function
+    4. Arrow Function
+
+How to call a Function? :-
+    To call a Function we need function_reference and paranthesis.
+
+        syntax : - function_reference (argument);
+
+    It will generate function call and function code will execute.
+
+
+1. Function declaration statement :-
+
+    consists of the function keyword, followed by:
+        The name of the function (Variable_Name):- it store the reference of function object (or says store function_reference).
+
+        A list of parameters to the function, enclosed in parentheses and separated by commas.
+
+        The JavaScript statements that define the function, enclosed in curly brackets, { /* statement we want to use or execute */ }.
+
+            syntax :- function Variable_Name(parameters){
+                // statement
+                return;
+            }
+
+    Parameter:- Parameter are the variable declared in the function definition. Parameter have local scope i.e. we can use parameter inside function only. 
+    Parameter are used to accept the value that are passed at the time of function call.
+
+    Argument:- Argument are the value that are passed in the function call statement. Argument can be anything i.e. it can be literal or expression which gives a result.
+
+    Return Keyword:- It is a keyword used as control transfer statement. It will stop the execution of function and return the control to the caller along with the data.
+
+
+Note:- The variable declared inside a function cannot be exist outside that function.
+Note:- If the function is not returning anything, JS Engine implicitly reurn undefined.
+Note:- Function hoisting only works with function declarations — not with function expressions. 
+
+
+2. Expression Function / Function as a expression :-
+
+    Here,  we pass the function as a value to a variable.
+
+    With the help of this variable, we call that function.
+
+    The function which is passed as a value to a variable is referred as First Class Function.
+
+    Expression Function can't be hoisted i.e. we can not use that function before declaration.
+
+    Expression Function is also called Anonymous Function because it does not have to have a name.
+    
+        syntax:-
+           let speak =  function (){
+
+            }
+            speak()
+
+
+            
+
+
+
+3. Immediate Invoke Function :-
+    when a function is called as soon as it's object is created is known as Immediate Invoke Function.
+
+    We have to write the function inside the paranthesis to group it.
+
+        syntax :- 
+            (function (){
+                // statement
+                // return keyword is not used here.
+            })
+        This whole thing hold the reference of Imm. Invoke Function
+
+
+    The function is not visible(available) outside the scope.
+
+    After grouping it, we have to use paranthesis to call this function.
+
+        syntax :-
+            (function (){
+                // statement
+                // return keyword is not used here.
+            })();
+
+    Immediate Invoke Function execute only once.
+
+    This function doesnot return anything. Even JS Engine is also not returning anything.
+
+
+4. Arrow Function :- 
+    The main function of arrow function is to reduce the function syntax.
+
+    Arrow Function is introduced in ES6.
+
+        syntax :-
+        (Parameter) => {
+            // statement
+        }
+
+        => :- called Flat Operator
+
+    If we have only single parameter, it is not necessary to use paranthesis for paramenter.
+        syntax :-
+        a => {
+            return "Hello";
+        }
+
+    If function have single statement, then block(paranthesis) is optional
+        syntax :-
+        (a,b) => a+b;
+
+    Arrow functions are always anonymous.
+
+    It does not have its own this, arguments, super, or new.target. 
+    
+    Two factors influenced the introduction of arrow functions: shorter functions and non-binding of this.
+
+    In Arrow Function, we have two types of return :-
+        1. Implicit return
+        2. Explicit return
+
+    1. Implicit return
+        If there is only one statement and 
+        If block is not created then JS Engine will return that statement automatically.
+        
+
+    2. Explicit return 
+        If block is created and function is not returning any value, JS Engine will return undefined.
+        To return a value Explicitly from block, we have to use return keyword.
+        
+        If block is created then we have to use return keyword to return value otherwise JS Engine will return undefined.

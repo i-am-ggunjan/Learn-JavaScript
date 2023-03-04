@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form>
+        <label for="user">Username</label>
+        <input type="text" name="Username" id="user" value="">
+        <br> <br>
+        <label for="pass">Password</label>
+        <input type="password" name="Password" id="pass" value="">
+    </form>
+
+    <script>
+        console.log(document.forms[0].elements.Username);
+
+        // document.forms
+        // It will return HTML collecton of forms in webpages.
+
+        // Inside this, we have 'elements' property by which we can target input fields using their 'name'.
+        // document.forms.elements.input_field_name
+
+        // document.forms.elements.input_field_name.value
+        // document.forms[0].elements.Username.value = "sdgbnfg";
+        // document.forms[0].elements.Password.value = "12365478";
+
+
+// and we can also target input fields value, by using 'value' property.
+    </script>
+</body>
+
+</html>

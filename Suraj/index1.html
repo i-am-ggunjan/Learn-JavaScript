@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraj</title>
+</head>
+
+<body>
+    <section>
+        <article>
+            <form>
+                <label for="a">Choose Expense Amount</label>
+                <input type="text" placeholder="Expense Amount" name="Expense" id="a" />
+
+                <label for="b">Choose Description</label>
+                <input type="text" placeholder="Description" name="Description" id="b" />
+
+                <label for="c">Choose Category </label>
+                <input type="text" placeholder="Category" name="Category" id="c" />
+
+                <button class="add_expense">Add Expense</button>
+            </form>
+
+        </article>
+        <article>
+            <ol class="print"></ol>
+        </article>
+    </section>
+
+    <script>
+        let in1 = document.forms[0].elements.Expense;
+        let in2 = document.forms[0].elements.Description;
+        let in3 = document.forms[0].elements.Category;
+
+        let form = document.forms[0];
+
+        let btn_add_expense = document.querySelector(".add_expense");
+
+        let ol = document.querySelector("ol");
+
+
+
+        form.addEventListener("submit", e => {
+            // let user = [];
+            e.preventDefault();
+            console.log(in1.value);
+            console.log(in2.value);
+            console.log(in2.value);
+        });
+
+
+        btn_add_expense.addEventListener("click", () => {
+
+            ol.innerHTML += `<li> ${in1.value} - ${in2.value} - ${in3.value} <button>Delete Expense</button> <button>Edit Expense</button> </li>`;
+        })
+
+    </script>
+</body>
+
+</html>

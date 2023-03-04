@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>item 1</td>
+            <td>item 2</td>
+            <td>item 3</td>
+        </tr>
+        <tr>
+            <td>item 1</td>
+            <td>item 2</td>
+            <td>item 3</td>
+        </tr>
+        <tr>
+
+            <td>item 1</td>
+            <td>item 2</td>
+            <td>item 3</td>
+        </tr>
+    </table>
+
+    <script>
+        // How to slelect table ?
+        // let table = document.querySelector("table");
+
+        // table.style.border = "1px solid black";
+        // table.style.color = "red";
+
+        // rows :- 
+        // cells :-
+
+        // table.rows[0].style.backgroundColor = "yellow";
+        // table.rows[2].style.backgroundColor = "pink";
+
+        // table.rows[2].cells[1].style.color = "violet";
+        // table.rows[1].cells[1].style.backgroundColor = "orange";
+
+        // table.rows[1].cells[1].style.backgroundColor = "orange";
+
+
+        // for(value of table.rows){  // It iterate in rows and select the cell according to condition.
+        //     value.cells[0].style.backgroundColor = "grey";
+        // }
+
+        // for(value of table.rows){
+        //     value.cells[1].style.backgroundColor = "green";
+        // }
+
+        // for(value of table.rows){
+        //     value.cells[2].style.backgroundColor = "red";
+        // }
+
+
+
+        let sec = document.createElement("section");
+        // console.log(sec);
+
+        let body = document.body;
+        console.log(body);
+
+        body.insertAdjacentElement("AfterBegin", sec);
+
+
+        sec.innerHTML = "Hii "
+        sec.innerHTML += "My name is <br>Gaurav <h1>Gunjan<h1/>";
+        // innerHTML :- We can insert text + HTML elements.
+
+
+        // sec.textContent = "Hiiii";
+        // textContent :- We can insert only text.
+
+
+
+    </script>
+</body>
+
+</html>

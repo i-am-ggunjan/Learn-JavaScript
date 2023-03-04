@@ -1,0 +1,41 @@
+<!-- Object -->
+         It is real world entity which have states and behaviour.
+         It is a block of memory.
+         In object, data is stored in key-value pair. key-value pair should be seperated by comma.
+
+
+         <!--Behaviour of key & How numeric_value key get implement -->
+         Key will be of string type. Any other key type will convert into string.
+         If we gave numeric key, it will converted to string and also get sorted by js engine automatically.
+         If we try to access member that is not available, we will get undefined.
+
+
+         <!-- Way to create object -->
+         1. by curly_braces.
+         2. by new keyword and object constructor.
+
+
+         <!-- How to access object -->
+         To access object member ---> we have to use dot_operator or sqaure_bracket with double_quotes.
+                    <!--Syntax  -->
+                object_referenece.member  
+                object_referenece["member"] 
+                    Member ---> key_name
+
+
+         <!-- How to insert or update the key-value pair -->
+         With the help of object_referenece and dot_operator or object_referenece and sqaure_bracket with double_quotes, we can update the key-vakue pair. If it is not present, it will get inserted else value will be updated.
+
+
+         <!--  -->
+         Value associated with index --> Array
+         Value associated with key --> Object
+         
+
+         <!-- In object, value can't be access directly by using 'for of' loop.
+         In array, value is access directly by using 'for of' loop because of indexing in array. -->
+
+Nested Object :- 
+    Nested objects are the objects that are inside another object. 
+
+    

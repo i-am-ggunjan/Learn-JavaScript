@@ -1,0 +1,34 @@
+DOM API
+    DOM stands for Document Object Model.
+    Here, Document -- HTML
+          Object -- JavaScript
+          Model -- Structure
+
+    DOM API will represent HTML document in 'Tree structure', where all element and node of tree are converted in JavaScript object.
+
+DOM API stores data in two collection :-
+    1. HTML Collection -- Only HTML elements.
+    2. Node List -- HTML element + Comment + String + etc.
+
+The Document Object Model connects webpages to scripting or programming language by representing the structure of a document -- such as the HTML representing webpage -- in memory.
+
+The DOM represent a document with a logical tree. Each branch of the tree ends in a node.
+
+DOM methods allow programmatic access to the tree.
+
+With the help of DOM, we can change the document -- structure, style or content.
+
+Here, each node will be converted in JavaScript object.
+
+The tree structure of a webpage will be stored in an object called document where everything is stored in the form of object.
+
+
+Difference between HTML collection and NodeList ?
+    HTML collection is the collection of only HTML elements while NodeList is the collection of HTML elements and Non-HTML elements like comment, text, etc.
+
+    HTML collection is live-updated while NodeList is not live-updated.
+
+    In HTML collection, all elements are associated with index while in NodeList, all elements are also associated with index.
+
+Note :- 1. HTML collection and NodeList are not array but we can access element using index.
+        2. Array method will not work here on HTML collection or NodeList.

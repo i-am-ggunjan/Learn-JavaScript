@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum non itaque eum impedit eligendi rerum vel facere
+        earum dicta hic ad porro in, tempora nostrum natus dolor magnam ipsam blanditiis?</p>
+
+    <button>Remove Event</button>
+
+    <script>
+        let p = document.querySelector("p");
+        let btn = document.querySelector("button");
+
+        function handleClick(e) {
+            p.style.backgroundColor = "red";
+        }
+
+        p.addEventListener("click", handleClick);
+
+        btn.addEventListener("click", () => {
+            // alert("event listener removed form p tag");
+            p.removeEventListener("click", handleClick);
+        });
+        
+    </script>
+</body>
+
+</html>
