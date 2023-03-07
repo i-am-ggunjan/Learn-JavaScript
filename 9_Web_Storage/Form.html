@@ -34,7 +34,7 @@
     </section>
     <section>
         <article>
-            <ol class="print"></ol>
+            <ul id="print"></ul>
         </article>
     </section>
 
@@ -44,16 +44,12 @@
         let form = document.forms[0]
         let in1 = form.elements.amount;
         let in2 = form.elements.detail;
-        let btn_add_expense = document.querySelector(".expenses");
-        let ol = document.querySelector("ol");
+        const print = document.getElementById('print')
 
 
         form.addEventListener("submit", (e) => {
             e.preventDefault();
-            // const amount = event.target.amount.value;
             const amount = in1.value;
-
-            // const detail = event.target.detail.value;
             const detail = in2.value;
 
             const obj = {
@@ -62,16 +58,55 @@
             }
             let obj_string = JSON.stringify(obj)
 
-            // localStorage.setItem(Math.random(), obj_string)
             localStorage.setItem(obj.detail, obj_string)
             console.log(amount);
             console.log(detail);
+            showDetails(obj)
         })
 
-        btn_add_expense.addEventListener("click", () => {
+        function showDetails(obj) {
+            const li = document.createElement('li')
+            li.innerHTML = obj.amount + '-' + obj.detail
 
-            ol.innerHTML += `<li> ${in1.value} - ${in2.value} - <button>Delete Expense</button> <button>Edit Expense</button> </li>`;
-        })
+            const DeleteItem = document.createElement('button')
+            DeleteItem.innerHTML = 'Delete';
+            const EditItem = document.createElement('button')
+            EditItem.innerHTML = 'Edit';
+
+            DeleteItem.addEventListener.submit = () => {
+                localStorage.removeItem(obj.disc)
+                print.removeChild(li)
+            }
+
+            EditItem.click = () => {
+                localStorage.removeItem(obj.disc)
+                print.removeChild(li)
+                // document.getElementById('Amount').value = obj.amount;
+                // document.getElementById('disc').value = obj.disc;
+                // document.getElementById('detail').value = obj.detail;
+
+            }
+            li.appendChild(DeleteItem);
+            li.appendChild(EditItem);
+            print.appendChild(li);
+
+        }
+
+        // function showDetails(obj) {
+        //     li.innerHTML +=  `${in1.value} | ${in2.value} `;
+        //     li.appendChild(del)
+        //     li.appendChild(edit)
+        //     print.appendChild(li)
+
+        //     del.onclick = () => {
+        //         localStorage.removeItem(obj.detail)
+        //         print.removeChild(li)
+        //     }
+        //     edit.onclick = () => {
+        //         localStorage.removeItem(obj.detail)
+        //         print.removeChild(li)
+        //     }
+        // }
     </script>
 </body>
 

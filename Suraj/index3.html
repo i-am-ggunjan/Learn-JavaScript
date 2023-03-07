@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ExpanseTracker</title>
 </head>
+
 <body>
-    <header><h2>Expanse tracker</h2></header>
+    <header>
+        <h2>Expanse tracker</h2>
+    </header>
     <section>
         <form onsubmit="saveToLocalStorage(event)">
             <label for="Amount">Amount</label>
@@ -16,63 +20,70 @@
             <input type="text" id="disc" name="exmaple" class="b">
             <label for="detail">Write detail</label>
             <input list="details" id="detail" name="detail" class="c">
-                <datalist id="details">
-                    <option value="Chocolate">
-                    <option value="movie">
-                    <option value="fuel">
-                    <option value="tea">
-                    <option value="cold drink">
-                </datalist>
-                <button id="f">Add_new_Expanse</button>
+            <datalist id="details">
+                <option value="Chocolate">
+                <option value="movie">
+                <option value="fuel">
+                <option value="tea">
+                <option value="cold drink">
+            </datalist>
+            <button id="f">Add_new_Expanse</button>
         </form>
         <div>
             <h2>total expanse list</h2>
-             <ul id="print"></ul>
+            <ul id="print"></ul>
         </div>
-       
+
     </section>
 </body>
 <script>
-    function saveToLocalStorage(event){
+    function saveToLocalStorage(event) {
         event.preventDefault();
-        const a=event.target.Amount.value;
-        const d=event.target.disc.value;
-        const f=event.target.detail.value;
-        const obj={
-            a,
-            d,
-            f
+        const amount = event.target.Amount.value;
+        const disc = event.target.disc.value;
+        const detail = event.target.detail.value;
+        const obj = {
+            amount,
+            disc,
+            detail
         }
-        localStorage.setItem(obj.d,JSON.stringify(obj))
+        localStorage.setItem(obj.disc, JSON.stringify(obj))
         showDetails(obj)
     }
-   function showDetails(obj){
-    const p=document.getElementById('print')
-    const c=document.createElement('li')
-    c.textContent=obj.a+'-'+obj.d+'-'+obj.f
-        const DeleteItem=document.createElement('input')
-        DeleteItem.type='button'
-        DeleteItem.value='Delete'
-        DeleteItem.onclick=()=>{
-            localStorage.removeItem(obj.d)
-            p.removeChild(c)
+    function showDetails(obj) {
+        const print = document.getElementById('print')
+        const li = document.createElement('li')
+        li.innerHTML = obj.amount + '-' + obj.disc + '-' + obj.detail
+
+        const DeleteItem = document.createElement('button')
+        DeleteItem.innerHTML = 'Delete';
+        // const DeleteItem = document.createElement('input')
+        // DeleteItem.type = 'button'
+        // DeleteItem.value = 'Delete'
+      
+        DeleteItem.onclick = () => {
+            localStorage.removeItem(obj.disc)
+            print.removeChild(li)
         }
 
-        const EditItem=document.createElement('input')
-        EditItem.type='button'
-        EditItem.value='Edit'
-        EditItem.onclick=()=>{
-            localStorage.removeItem(obj.d)
-            p.removeChild(c)
-        document.getElementById('Amount').value=obj.a;
-        document.getElementById('disc').value=obj.d;
-        document.getElementById('detail').value=obj.f;
+        const EditItem = document.createElement('button')
+        EditItem.innerHTML = 'Edit';
+        // const EditItem = document.createElement('input')
+        // EditItem.type = 'button'
+        // EditItem.value = 'Edit'
+        EditItem.onclick = () => {
+            localStorage.removeItem(obj.disc)
+            print.removeChild(li)
+            document.getElementById('Amount').value = obj.amount;
+            document.getElementById('disc').value = obj.disc;
+            document.getElementById('detail').value = obj.detail;
 
         }
-        c.appendChild(DeleteItem);
-        c.appendChild(EditItem);
-        p.appendChild(c);
+        li.appendChild(DeleteItem);
+        li.appendChild(EditItem);
+        print.appendChild(li);
 
-   }
+    }
 </script>
+
 </html>
