@@ -16,7 +16,7 @@
         <article>
             <form>
                 <label for="Amount">Amount</label>
-                <input type="number" name="amount" id="amount">
+                <input type="number" id="amount">
                 <br><br>
                 <label for="detail">Write detail</label>
                 <input type="text" name="detail" id="detail" list="details">
@@ -73,40 +73,22 @@
             const EditItem = document.createElement('button')
             EditItem.innerHTML = 'Edit';
 
-            DeleteItem.addEventListener.submit = () => {
-                localStorage.removeItem(obj.disc)
+            DeleteItem.addEventListener("click", () => {
                 print.removeChild(li)
-            }
+                localStorage.removeItem(obj.detail)
+                // localStorage.clear()
+                form.elements.amount.value = "";
+                form.elements.detail.value = "";
+            })
 
-            EditItem.click = () => {
-                localStorage.removeItem(obj.disc)
-                print.removeChild(li)
-                // document.getElementById('Amount').value = obj.amount;
-                // document.getElementById('disc').value = obj.disc;
-                // document.getElementById('detail').value = obj.detail;
+            EditItem.addEventListener("click", () => {
 
-            }
+                localStorage.removeItem(obj.detail)
+            })
             li.appendChild(DeleteItem);
             li.appendChild(EditItem);
             print.appendChild(li);
-
         }
-
-        // function showDetails(obj) {
-        //     li.innerHTML +=  `${in1.value} | ${in2.value} `;
-        //     li.appendChild(del)
-        //     li.appendChild(edit)
-        //     print.appendChild(li)
-
-        //     del.onclick = () => {
-        //         localStorage.removeItem(obj.detail)
-        //         print.removeChild(li)
-        //     }
-        //     edit.onclick = () => {
-        //         localStorage.removeItem(obj.detail)
-        //         print.removeChild(li)
-        //     }
-        // }
     </script>
 </body>
 
